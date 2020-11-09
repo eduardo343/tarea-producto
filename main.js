@@ -3,7 +3,7 @@ var btnborrar = document.querySelector("#borrar");
 var btnbuscar = document.querySelector("#buscar");
 var btnmostar = document.querySelector("#mostrar producto");
 var btnmostrarinv = document.querySelector("#mostrarinverso (producto)");
-var btninsertar = document.querySelector("#Insertar");
+var btninsertar = document.querySelector("#insertar");
 var btnagregarprimero = document.querySelector("#addPrimero")
 var btneliminarprimero = document.querySelector("#EliminarPrimero")
 
@@ -121,7 +121,7 @@ btnagregar.addEventListener("click", () => {
     if(Mostrar.Verificar(codigo.value)==false){
         let p = new Array (codigo.value,nombre.value,desc.value,cantidad.value,coste.value,(Number(cantidad.value)* Number(coste.value)))
         Mostrar.AgregarFinal(p)
-        lista.innerHTML = "Codigo: "+ p[0] + " Nombre: "+ p[1]+ " Descripcion: "+p[2]+" Cantidad: "+p[3]+" Coste: "+p[4]+" Total: "+p[5]+ "</br > Agregado con exito!"
+        lista.innerHTML = "codigo: "+ p[0] + " Nombre: "+ p[1]+ " Descripcion: "+p[2]+" Cantidad: "+p[3]+" Coste: "+p[4]+" Total: "+p[5]+ "</br > Agregado con exito!"
     }else{
         alert ("Error! Codigo repetido")
     };
@@ -129,7 +129,7 @@ btnagregar.addEventListener("click", () => {
 btnborrar.addEventListener("click", () =>{
     let d = Mostrar.BuscarCode(codigo.value)
     if(d!=null){
-        lista.innerHTML = +"Codigo: "+d.codigo+" Nombre: "+d.nombre+" Descripcion: "+d.desc+" Cantidad: "+d.cantidad+" Coste: "+d.coste+" Total: "+d.total+"</br > Eliminado con exito"
+        lista.innerHTML = +"codigo: "+d.codigo+" Nombre: "+d.nombre+" Descripcion: "+d.desc+" Cantidad: "+d.cantidad+" Coste: "+d.coste+" Total: "+d.total+"</br > Eliminado con exito"
         Mostrar.EliminarCode(d)
     }else{
         alert("El producto seleccionado no Existe!")
@@ -138,7 +138,7 @@ btnborrar.addEventListener("click", () =>{
 btnbuscar.addEventListener("click", () =>{
     let busc = Mostrar.BuscarCode(codigo.value)
     if(busc!=null){
-        lista.innerHTML = "Codigo: "+busc.codigo+" Producto: "+ busc.nombre+" Descripcion: "+ busc.desc+" Cantidad: "+busc.cantidad+" Coste: "+busc.coste+" Total: "+busc.total+ "</br > Producto Encontrado!"
+        lista.innerHTML = "codigo: "+busc.codigo+" Producto: "+ busc.nombre+" Descripcion: "+ busc.desc+" Cantidad: "+busc.cantidad+" Coste: "+busc.coste+" Total: "+busc.total+ "</br > Producto Encontrado!"
     }else{
         alert("El producto No existe. Intente con otro codigo")
     }
@@ -148,7 +148,7 @@ btnmostar.addEventListener("click", () =>{
     let current = null
     for(let i=0; i!=Mostrar.size;i++){
         current = Mostrar.Recorrer(current)
-        lista.innerHTML += "Codigo: "+current.codigo+" Producto: "+ current.nombre+" Descripcion: "+ current.desc+" Cantidad: "+current.cantidad+" Coste: "+current.coste+" Total: "+current.total+ "</br >"
+        lista.innerHTML += "codigo: "+current.codigo+" Producto: "+ current.nombre+" Descripcion: "+ current.desc+" Cantidad: "+current.cantidad+" Coste: "+current.coste+" Total: "+current.total+ "</br >"
     }
     lista.innerHTML += "Lista Completa!"
 });
@@ -161,7 +161,7 @@ btnmostrarinv.addEventListener("click", () =>{
             inver[i] = current
         }
         for(let i=Mostrar.size-1;i!=-1;i--){
-            lista.innerHTML += "Codigo: "+inver[i].codigo+" Producto: "+ inver[i].nombre+" Descripcion: "+ inver[i].desc+" Cantidad: "+inver[i].cantidad+" Coste: "+inver[i].coste+" Total: "+inver[i].total+ "</br >"
+            lista.innerHTML += "codigo: "+inver[i].codigo+" Producto: "+ inver[i].nombre+" Descripcion: "+ inver[i].desc+" Cantidad: "+inver[i].cantidad+" Coste: "+inver[i].coste+" Total: "+inver[i].total+ "</br >"
         }
         lista.innerHTML += "Lista Completa!"
 });
@@ -189,7 +189,7 @@ btnagregarprimero.addEventListener("click", () => {
             Mostrar.AgregarInicio(agp)
             lista.innerHTML = agp[0]+" "+agp[1]+" "+agp[2]+" "+agp[3]+" "+agp[4]+" "+agp[5]+ "</br > Agregad0 con exito"
         }else{
-            alert ("Codigo Repetido")
+            alert ("codigo Repetido")
         }
 });
 btneliminarprimero.addEventListener("click", () =>{
