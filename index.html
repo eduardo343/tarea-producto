@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventario chido</title>
+</head>
+<body>
+   
+    <h1>app para control de inventario</h1>
+    <fieldset class="fieldset-1">
+<div>
+    <form>
+        <fieldset>
+            <h1>formulario</h1>
+            <h3><label for="text">codigo del producto:</label></h3>
+            <input type="number" id="codigo">
+            <p></p>
+            <h3><label for="text">nombre del producto:</label></h3>
+            <input type="text" id="nombre">
+            <p></p>
+            <h3><label for="text">cantidad de productos:</label></h3>
+            <input type="number" id="cantidad">
+            <p></p>
+            <h3><label for="text">coste del producto:</label></h3>
+            <input type="number" id="coste">
+            <p></p>
+            <h3><label for="text">descripcción(producto):</label></h3>
+            <input type="text" id="desc">
+            <p></p>
+            <input type="button" id="Agregar" value="Agregar Producto">
+            <p></p>
+        </fieldset>
+    </form>    
+</div>
+<div>
+    <form>
+        <fieldset>
+            <h1>los botones chavon</h1>
+                <h3><label for="numero">borrar por codigo Producto:</label></h3>                
+                <input type="button" value="Borrar" id="Borrar" />
+                <h3><label for="numero">buscar producto x codigo:</label></h3>
+                <input type="button" id="buscar" value="Buscar">
+                <p></p>
+                <input type="button" id="mostrar" value="mostrar producto">
+                <p></p>
+                <input type="button" id="mostrarInverso" value="mostrar los productos (Orden Inverso)">
+                <p></p>
+                <p></p>
+                <input type="button" id="insertar" value="insertar la posición del Producto">
+                <br>
+                <br>
+                <input type="number" name="posicion" id="posicion">
+                <p></p>
+                <input type="button" id="addPrimero" value="agregar Primera Posición">
+                <input type="button" id="eliminarPrimero" value="eliminar primera Posición">
+        </fieldset>    
+    </form>
+</div>
+</fieldset>>
+<form>
+    <fieldset name="2">
+        <div>
+            <h1>lista</h1>
+            <p id="lista"></p>
+        </div>
+    </fieldset>
+</form>
+</body>
+<script src="main.js"></script>
+</html>
